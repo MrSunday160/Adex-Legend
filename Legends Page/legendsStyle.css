@@ -1,0 +1,655 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;300;400;600&family=Montserrat:wght@100;300;400;500;600&family=Orbitron:wght@400;600&family=Russo+One&display=swap');
+
+:root{
+    --red: #FB4A4B;
+    --black: #000;
+    --white: #F9F9F9;
+    --grey: #94999F;
+    --darkBlack: #252525;
+}
+
+* {
+
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+
+}
+
+body{
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+
+    height: 100%;
+    width: 100%;
+
+    position: relative;
+
+    background-image: url(../assets/image\ 6-2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: linear-gradient(180deg, rgba(109, 109, 109, 0.0252) 0%, rgba(0, 0, 0, 0.63) 50.52%),
+
+}
+
+/* header */
+
+/* navbar */
+
+.logoDropdown{
+
+    /* display: none; */
+    min-width: 150px;
+    font-size: clamp(1.25rem, 0.4688rem + 2.5vw, 1.875rem);
+    font-family: 'Russo One', sans-serif;
+
+}
+
+a{
+    color: var(--white);
+    text-decoration: none;
+    font-size: clamp(1rem, 0.6875rem + 1vw, 1.25rem);
+    font-family: 'Orbitron', sans-serif;
+}
+
+.navbar{
+
+    display: none;
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+
+    width: 100%;
+    
+}
+
+.nav-menu{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: min(2rem, 30px);
+}
+
+.nav-link{
+    transition: 0.7s ease;
+}
+
+.nav-link:hover{
+    color: dodgerblue;
+
+}
+
+.burger{
+    display: none;
+    cursor: pointer;
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--white);
+}
+
+@media(min-width: 426px){
+
+    .navbar{
+
+        display: none !important;
+
+    }
+    .nav-menu{
+
+        display: none !important;
+
+    }
+    .logoDropdown{
+
+        display: none !important;
+
+    }
+
+}
+
+@media(max-width:425px){
+    .burger{
+        display: block !important;
+    }
+
+    .burger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .burger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .burger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu{
+
+        position: fixed;
+        top: -100%;
+        left: 0;
+        gap: 0;
+        flex-direction: column;
+        background-color: var(--darkBlack);
+        width: 100%;
+        text-align: center;
+        z-index: 10;
+        transition: 0.3s;
+
+    }
+
+    .nav-item{
+        width: 100%;
+        padding: 15px;
+        border-top: 1px solid white;
+    }
+
+    .nav-menu.active{
+        top: 70px;
+    }
+
+}
+
+/* header */
+
+header{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: clamp(1.125rem, -8.7128rem + 21.6216vw, 5.125rem);
+    padding-right: clamp(1.125rem, -8.7128rem + 21.6216vw, 5.125rem);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    /* gap: 460px; */
+
+    background: #252525;
+
+    width: 100%;
+
+}
+
+.logo{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+
+    font-family: 'Russo One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(1.25rem, 0.4688rem + 2.5vw, 1.875rem);
+    line-height: 39px;
+    text-align: center;
+
+    color: #F9F9F9
+
+}
+
+.logoLink{
+
+    text-decoration: none;
+
+}
+
+.links{
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0px;
+    /* gap: 46px; */
+
+}
+
+.links ul{
+
+    list-style: none;
+    display: inline-flex;
+    gap: 30px;
+
+}
+
+.links ul a{
+
+    font-family: 'Orbitron';
+    font-style: normal;
+    font-weight: 600;
+    font-size: clamp(1rem, 0.6875rem + 1vw, 1.25rem);
+    line-height: 25px;
+
+    color: #FFFFFF;
+
+    text-align: center;
+    text-decoration: none;
+
+}
+
+/* mobile*/
+@media only screen and (max-width: 425px){
+
+    header{
+
+        gap: 20px;
+        padding: 10px;
+
+    }
+    .logo{
+        
+        display: none;
+        padding: 0px;
+        width: 200px;
+
+    }
+    .links{
+
+        display: none;
+
+    }
+
+    .dropDownMenu{
+
+        display: block;
+
+    }
+
+}
+
+/* main */
+
+main{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 140px 240px;
+    gap: 80px;
+
+    width: 100%;
+
+
+}
+
+#legendsTitle{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 59px;
+
+    text-align: center;
+
+    color: #FFFFFF;
+
+}
+
+#legendsContent{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    gap: 109px;
+
+}
+
+#legendsContent hr{
+
+    display: none;
+    border: 1px solid #F9F9F9;
+    width: 70%;
+
+}
+
+.legendInfo{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    z-index: 10;
+
+    gap: 72px;
+
+    width: 100%;
+
+}
+
+.legendAvatar{
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px;
+    gap: 10px;
+
+    z-index: 9;
+
+}
+
+.legendAvatar img{
+
+    width: auto;
+    height: 100%;
+
+    transition: 800ms;
+
+}
+
+.avatarRect{
+
+    box-sizing: border-box;
+
+    display: block;
+
+    position: absolute;
+    width: 273px;
+    height: 333px;
+    left: -10px;
+    top: 28px;
+
+    z-index: 1;
+
+    background: rgba(37, 37, 37, 0.36);
+    border: 4px solid #ABABAB;
+
+}
+
+.legendAvatar img:hover{
+
+    transform: scale(1.02);
+
+}
+
+.legendDesc{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 22px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+
+    color: #FFFFFF;
+
+    width: auto;
+    height: auto;
+
+}
+
+.legendDesc h1{
+
+    font-size: 36px;
+    line-height: 44px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.045em;
+
+
+}
+
+.legendDesc small{
+
+    font-size: 15px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.3em;
+
+}
+
+.legendDesc .desc{
+
+    font-size: 17px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.legendDesc .ability{
+
+    display: block;
+
+    font-size: 17px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    letter-spacing: 0.04em;
+
+}
+
+.abilityAlt{
+
+    display: none !important;
+    
+    font-size: 17px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    letter-spacing: 0.04em;
+
+}
+
+@media only screen and (max-width: 1538px){
+
+    main{
+
+        padding: 100px 120px;
+
+    }
+
+    .avatarRect{
+
+        display: none;
+
+    }
+    .legendAvatar{
+
+        height: 450px;
+
+    }
+    .legendDesc .ability{
+
+        display: none;
+
+    }
+    .legendDesc .abilityAlt{
+
+        display: block !important;
+
+    }
+
+}
+
+@media only screen and (max-width: 425px){
+
+    main{
+
+        padding: 50px 10px;
+
+    }
+    #legendsContent{
+
+        gap: 50px;
+        
+    }
+    .legendInfo{
+
+        flex-direction: column;
+
+        padding: 10px 0px 50px 0px;
+
+    }
+    .legendDesc{
+
+        padding-left: 10px;
+        padding-right: 10px;
+        gap: 40px;
+
+    }
+    #legendsTitle{
+
+        font-size: 32px;
+        width: 100%;
+
+    }
+    #legendsContent hr{
+
+        display: block;
+
+    }
+    .legendDesc .ability{
+
+        display: none;
+
+    }
+    .legendDesc .abilityAlt{
+
+        display: block !important;
+
+    }
+
+}
+
+
+
+/* footer */
+
+footer{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 45px;
+    gap: 96px;
+
+    background: #94999F;
+
+    width: 100%;
+    height: auto;
+
+}
+
+#footerLogo{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* padding: 10px; */
+
+    font-family: 'Russo One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(0.9rem, 0.5rem + 0.7vw, 1.25rem);
+    line-height: 39px;
+    text-align: center;
+
+    color: #F9F9F9
+
+}
+
+#vl{
+
+    height: 70px;
+
+    border: 2px solid #F9F9F9;
+
+}
+
+.footerText{
+
+    font-family: 'Orbitron';
+    font-style: normal;
+    font-weight: 500;
+    font-size: clamp(0.9rem, 0.5rem + 0.7vw, 1.25rem);
+    line-height: 30px;
+    text-align: center;
+
+    color: #F9F9F9;
+
+}
+
+#followUs{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 24px;
+
+}
+
+#followUs img{
+
+    width: 34px;
+    height: 34px;
+
+}
+
+#followUs a{
+
+    height: 34px;
+
+}
+
+@media only screen and (max-width: 1399px){
+
+    #vl{
+
+        display: none;
+
+    }
+    footer{
+
+        flex-direction: column;
+        gap: 20px;
+
+    }
+
+}
+
+@media only screen and (max-width: 425px){
+
+    footer{
+
+        gap: 20px;
+
+    }
+
+}

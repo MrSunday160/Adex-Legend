@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="registration.css">
+    <link rel="stylesheet" href="../mapsPage/maps.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Russo+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="../Home Page/homePage.html" class="logo">ADEX LEGEND</a>
+            <div class="nav-menu">
+                <div class="nav-item">
+                    <a href="../Legends Page/legendsPage.html"  class="nav-link">Legends</a>
+                </div>
+                <div class="nav-item">
+                    <a href="../mapsPage/maps.html" class="nav-link">Maps</a>
+                </div>
+                <div class="nav-item">
+                    <a href="../aboutUsPage/about.html" class="nav-link">About Us</a>
+                </div>
+                <div class="nav-item">
+                    <a href="../registPage/registration.html" class="nav-link">Registration</a>
+                </div>
+            </div>
+            <div class="burger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="form">
+        <form action="" class="form-container" id="form">
+            <div class="form-name">
+                    <input type="text" placeholder="First Name" name="first" id="first">
+                    <input type="text" placeholder="Last Name" name="last" id="last">
+            </div>
+            <div class="form-input">
+                <input type="text" placeholder="Email Address" name="email" id="email">
+            </div>
+            <div class="form-input">
+                <input type="password" placeholder="Password" name="password" id="password" >
+            </div>
+            <div class="form-gender-container">
+                <p>Gender:</p>
+                <div class="form-gender">
+                    
+                    <input type="radio" name="gender" id="male" value="male">
+                    <label for="male">Male</label>
+                    
+                    <input type="radio" name="gender" id="female" value="female">
+                    <label for="female">Female</label>
+                </div>
+            </div>
+            <div class="form-input">
+                <textarea name="address" placeholder="Address" id="address" cols="30" rows="10"></textarea>
+            </div>
+            <button type="submit" id="submit">Submit</button>
+        </form>
+    </div>
+
+    <div class="footer">
+        <div class="foot-container">
+            <a href="../Home Page/homePage.html"><div class="logo-bot">
+                <p>ADEX LEGEND</p>
+            </div></a>
+            <span class="v-line"></span>
+            <p>Contact Us</p>
+            <p>Register</p>
+            <div class="sosmed">
+                <p>Follow Us</p>
+                <a href="https://www.facebook.com/"><img src="../assets/facebook (1).png" alt=""></a>
+                <a href="https://www.instagram.com"><img src="../assets/instagram (2).png" alt=""></a>
+                <a href="https://www.youtube.com/"><img src="../assets/youtube (2).png" alt=""></a>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../script/script.js"></script>
+    <script src="../script/registration.js"></script>
+</body>
+</html>
